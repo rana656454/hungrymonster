@@ -1,5 +1,5 @@
-const getSearchValue = () =>{
 
+const getSearchValue = () =>{
     const searchValue = document.getElementById("search-input").value
     if(!searchValue){
         document.getElementById("row").innerHTML="<h1>You searched without typing anything. Please enter first then search.</h1>"
@@ -37,6 +37,7 @@ const getSearchValue = () =>{
 
 
 
+//meal deatails function
 
 const getmealDetails = (id) =>{
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -45,38 +46,53 @@ const getmealDetails = (id) =>{
         const meal = data.meals    
         meal.map(element=>{
             const mealImg = element.strMealThumb
-           const mealdetailsContainer = document.createElement("div")
+           const mealdetailsContainer = document.createElement("div")             
            const mealdetailsDiv = `<div style="width: 23rem; height:300px">
            <img style="width: 400px; height:300px; border-radius:"10px"; margin-top:50px" src="${mealImg}" alt="Card image cap">
            <div class="card-body" style="width: 400px;">
              <h4 class="card-title">${element.strMeal}</h4><br>
              <h5>Ingredient</h5>
-             <h6 class="card-text">${element.strIngredient1}</h6>, <h6 class="card-text">${element.strIngredient2}</h6><br>
-             <h6 class="card-text">${element.strIngredient3}</h6>, <h6 class="card-text">${element.strIngredient4}</h6> <br>
-             <h6 class="card-text">${element.strIngredient5}</h6>, <h6 class="card-text">${element.strIngredient6}</h6><br>
-             <h6 class="card-text">${element.strIngredient7}</h6>, <h6 class="card-text">${element.strIngredient8}</h6><br>
-             <h6 class="card-text">${element.strIngredient9}</h6>, <h6 class="card-text">${element.strIngredient10}</h6><br>
-
+             <ul id="ingredient-list">
+             </ul>
              <button class="btn btn-info" onclick="backSearch()" id="back-search">Go Search Bar</button>
            </div>
          </div>`
         // console.log(meal)
+
         mealdetailsContainer.innerHTML=mealdetailsDiv 
         document.getElementById("search-meal").appendChild(mealdetailsContainer)
+        
+
+        //inggredient & measure details
+        const stringMeasure= "strMeasure"
+        const stringIngredient = "strIngredient"
+        for (let i = 1; i <= 20; i++) {
+            const measure =  stringMeasure.concat(i)
+            const ingredient = stringIngredient.concat(i)
+            if(!element[ingredient]){
+            }
+            else{
+                const ul = document.getElementById("ingredient-list")
+                const li = document.createElement("li")
+                 li.innerText=`${element[measure]} ${element[ingredient]} `
+                 ul.appendChild(li)
+               
+            }
+                    
+        }
+
         document.getElementById("all-meals").style.display="none"
         })  
         
-        
-         
-        
-
     })
 
 }
 
 
+
+// go back search function
+
 const backSearch= () =>{
-    //document.getElementById("search-meal").style.display="none"
     document.getElementById("all-meals").style.display="block"
     document.getElementById("search-meal").innerHTML=""
     document.getElementById("row").innerHTML=""
