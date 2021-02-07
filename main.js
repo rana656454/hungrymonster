@@ -1,3 +1,4 @@
+// search value and search meal 
 
 const getSearchValue = () =>{
     const searchValue = document.getElementById("search-input").value
