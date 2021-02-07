@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid d-flex bd-highlight">
+            <div class="pt-5 w-100 bd-highlight">
+          <a class="navbar-brand" href="#"><img class="img-fluid" src="./img/logo.PNG" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+          <div class="collapse navbar-collapse p-2 flex-shrink-1 bd-highlight" id="navbarNavAltMarkup">
+            <div class="navbar-nav pt-5">
+              <a class="nav-link active ps-5" aria-current="page" href="#">Home</a>
+              <a class="nav-link ps-5" href="#">About</a>
+              <a class="nav-link ps-5" href="#">Recipe</a>
+              <a class="nav-link ps-5" href="#">Blog</a>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <section id="all-meals">
+
+    <input type="text" id="search-input" placeholder="Search for Meal">
+    <input type="button" value="Search" id="search-btn" onclick="getSearchValue()">
+
+    <div class="container">
+        <div class="row" id="row">
+         
+        </div>
+    </div>
+    <script src="main.js"></script>
+</section>
+
+<section id="search-meal">
+
+</section>
+</body>
+</html>

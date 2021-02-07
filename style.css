@@ -1,0 +1,74 @@
+.nav{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.col-style{
+    width: 25%;
+    margin: 10px;
+    
+    
+}
+.cart-style{
+width: 100%;
+height: 400px;
+cursor: pointer;    
+
+
+}
+
+.card-body{
+    background-color: aliceblue;
+}
+
+h6{
+    display: inline-block;
+}
+
+#search-meal{
+    margin-left: 450px;
+}
+#search-input{
+    width: 600px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 400px;
+ 
+}
+
+.row h1{
+    color: red;
+    font-weight: bold;
+    margin-left: 300px;
+    
+}
+#search-input:focus{
+    border: 2px solid tomato;
+}
+
+#search-btn{
+width: 150px;
+height: 52px;
+position: relative;
+left: -7px;
+top:1px;
+background-color: tomato;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border: none;
+cursor: pointer;
+}
+
+.card-body h4{
+    font-size: 30px;
+    font-weight: bold;
+    color: tomato;
+}
+
+.card-body h5{
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(105, 71, 255);
+}
